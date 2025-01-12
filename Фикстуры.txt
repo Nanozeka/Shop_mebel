@@ -1,0 +1,10 @@
+Команда для сохранения из базы данных в json формат  
+
+python manage.py dumpdata goods.Products --output=fixtures/goods/prod.json --indent 4 --verbosity 2
+
+python manage.py dumpdata goods.Categories --output=fixtures/goods/cats.json --indent 4 --verbosity 2
+
+Пояснение:
+--output=fixtures/goods/cats.json указывает, куда записывать данные.
+--indent 4 форматирует вывод с отступами, чтобы было удобнее читать.
+--verbosity 2 выводит дополнительную информацию в процессе выполнения.
