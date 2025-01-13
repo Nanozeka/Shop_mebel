@@ -52,7 +52,7 @@
                                     {% endif %}
 
                                     <div class="card-body">
-                                        <a href="../goods/product.html">
+                                        <a href="{% url "catalog:product" product.slug%}">
                                             <p class="card-title">{{ product.name }}</p>
                                         </a>
                                         <p class="card-text text-truncate">{{ product.description }}</p>
@@ -62,7 +62,7 @@
                                             {% if product.discount %}
                                                 <p><s>{{product.price }}</s> $</p>
                                                 <p><strong>{{ product.sell_price}} $</strong></p>
-                                                <span class="badge bg-warning text-dark">Скидка {{product.discount }} %</span>
+                                                <span class="badge bg-warning text-dark">Скидка {{product.discount  }} %</span>
                                             {% else %}
                                                 <p><strong>{{ product.price }} $</strong></p>
                                             {% endif %}
